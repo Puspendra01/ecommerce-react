@@ -5,7 +5,6 @@ import {
     Clear_Errors
 } from "../Component/CategoryConstant";
 
-
 export const CategoryReducer = (state={categorys:[]}, action) =>{
     switch(action.type){
         case All_Category_Request:
@@ -17,7 +16,7 @@ export const CategoryReducer = (state={categorys:[]}, action) =>{
         case All_Category_Success:
             return{
                 loading:false,
-                categorys:action.payload
+                categorys:action.payload.result
             };
 
             case All_Category_Fail:
